@@ -6,6 +6,9 @@ import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import android.util.Log;
+import vn.momo.momo_partner.AppMoMoLib;
+import vn.momo.momo_partner.MoMoParameterNameMap;
+
 
 @NativePlugin
 public class Momo extends Plugin {
@@ -16,16 +19,16 @@ public class Momo extends Plugin {
 
     @PluginMethod
     public void echo(PluginCall call) {
-        String value = call.getString("value");
+        String value = call.getString("MomoConfig");
 
         JSObject ret = new JSObject();
-        ret.put("aka", "this is android");
 
-        Log.v("Something", "is new");
-        Log.v("Something", "is new");
-        Log.v("Something", "is new");
-        Log.e("Something wrong here", "very wrong");
 
+        call.resolve(ret);
+    }
+    @PluginMethod
+    public void openMomoApp(PluginCall call) {
+        JSObject value = call.getString("value");
         call.resolve(ret);
     }
 }
