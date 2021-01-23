@@ -1,5 +1,5 @@
 import { WebPlugin } from '@capacitor/core';
-import { MomoPlugin } from './definitions';
+import { MomoPlugin, MomoConfig } from './definitions';
 
 export class MomoWeb extends WebPlugin implements MomoPlugin {
   constructor() {
@@ -13,6 +13,11 @@ export class MomoWeb extends WebPlugin implements MomoPlugin {
     console.log('ECHO', options);
     return options;
   }
+  async openMomoApp(MomoConfig: MomoConfig): Promise<any>{
+    console.log(MomoConfig);
+    console.log("Not Support Web");
+  }
+
 }
 
 const Momo = new MomoWeb();
