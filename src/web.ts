@@ -14,8 +14,9 @@ export class MomoWeb extends WebPlugin implements MomoPlugin {
     return options;
   }
   async openMomoApp(MomoConfig: MomoConfig): Promise<any>{
-    console.log(MomoConfig);
-    console.log("Not Support Web");
+    return new Promise((resolve) => {
+      resolve(MomoConfig);
+    })
   }
 
 }
