@@ -5,7 +5,6 @@
     <application>
         <activity android:name=".MomoActivity">
         </activity>
-
     </application>
 
 </manifest>
